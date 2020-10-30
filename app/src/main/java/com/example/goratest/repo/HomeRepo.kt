@@ -6,7 +6,9 @@ import com.example.goratest.domain.User
 import com.example.goratest.domain.mappers.toDomainModel
 import com.example.goratest.vo.NetworkResource
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class HomeRepo @Inject constructor(
         private val apiService: ApiService
 ) {

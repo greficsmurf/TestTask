@@ -6,7 +6,9 @@ import com.example.goratest.domain.Photo
 import com.example.goratest.domain.mappers.toDomainModel
 import com.example.goratest.vo.NetworkResource
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class PhotosRepo @Inject constructor(
     private val apiService: ApiService
 ){

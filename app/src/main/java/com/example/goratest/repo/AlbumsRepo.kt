@@ -6,7 +6,9 @@ import com.example.goratest.domain.Album
 import com.example.goratest.domain.mappers.toDomainModel
 import com.example.goratest.vo.NetworkResource
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class AlbumsRepo @Inject constructor(
     val apiService: ApiService
 ){
