@@ -17,11 +17,9 @@ import java.io.InputStream
 
 object MyFakeGlide {
 
-    fun with(fragment: Fragment): RequestManager = getRequestManager(fragment.lifecycle, fragment.requireContext())
+    fun with(fragment: Fragment): RequestManager = getRequestManager(fragment.requireContext())
 
-    private fun getRequestManager(lifecycle: Lifecycle, context: Context): RequestManager =
-        RequestManager(FakeGlideCacheManager.getInstance(context)).apply {
-        lifecycle.addObserver(this)
-    }
+    private fun getRequestManager(context: Context): RequestManager =
+        RequestManager(FakeGlideCacheManager.getInstance(context))
 
 }
