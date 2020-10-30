@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.example.goratest.vo.Resource"/>
+
+        <variable
+            name="resource"
+            type="Resource" />
+    </data>
+    <FrameLayout
+        android:isVisible="@{resource.status}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ProgressBar
+            android:layout_width="@dimen/progress_bar_width"
+            android:layout_height="@dimen/progress_bar_height"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+</layout>

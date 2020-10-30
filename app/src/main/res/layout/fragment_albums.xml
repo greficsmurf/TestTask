@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.example.goratest.vo.Resource"/>
+        <variable
+            name="viewModel"
+            type="com.example.goratest.ui.albums.AlbumsViewModel" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            app:resource="@{(Resource) viewModel.albumsResource}"
+            layout="@layout/loader_layout"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_albums"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>
